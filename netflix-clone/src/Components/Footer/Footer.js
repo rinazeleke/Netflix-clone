@@ -48,7 +48,7 @@ const Footer = () => {
           <p>service code</p>
         </div>
         <div className='copy_write'>
-          $copy; 1997-2024 Netflix,Inc.
+          &copy; 1997-2024 Netflix,Inc.
         </div>
 
       </div>
