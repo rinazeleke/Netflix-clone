@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './header.css'
 import Natflix from '../../assets/images/netflix.png'
 import SearchIcon from '@mui/icons-material/Search';
@@ -7,10 +7,22 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 
-
 const Header = () => {
+    const [show, setShow] = useState(false);
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                setShow(true);
+            } else setShow(false);
+        
+        })
+        return () => {
+            window.removeEventListener("scroll",null);
+          };
+    }, []);
+   
   return (
-    <div className='header_outer_container'>
+    <div className= {`header_outer_container ${show && "nav__black"}`}>
         <div className='header_container'>
             <div className='header_left'>
                 <ul>
