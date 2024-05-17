@@ -18,10 +18,10 @@ const Header = () => {
         })
         return () => {
             window.removeEventListener("scroll",null);
-          };
+        };
     }, []);
-   
-  return (
+
+return (
     <div className= {`header_outer_container ${show && "nav__black"}`}>
         <div className='header_container'>
             <div className='header_left'>
